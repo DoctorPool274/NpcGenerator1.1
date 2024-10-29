@@ -17,5 +17,6 @@ namespace NpcGenerator1._1
 
         public virtual void ApplyWeaponBonus() { }
         public virtual void ApplyArmorBonus() { }
+        public virtual void ApplyPotionBonus() { }
     }
 }

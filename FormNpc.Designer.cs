@@ -52,6 +52,9 @@
             this.BtnDeleteNpc = new System.Windows.Forms.Button();
             this.BtnGenerate = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
+            this.CbPotion = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.BtnPotion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -156,7 +159,7 @@
             // 
             this.labelSelectedEquipment.AutoSize = true;
             this.labelSelectedEquipment.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSelectedEquipment.Location = new System.Drawing.Point(45, 593);
+            this.labelSelectedEquipment.Location = new System.Drawing.Point(595, 401);
             this.labelSelectedEquipment.Name = "labelSelectedEquipment";
             this.labelSelectedEquipment.Size = new System.Drawing.Size(145, 31);
             this.labelSelectedEquipment.TabIndex = 13;
@@ -167,7 +170,7 @@
             this.labelWerte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelWerte.AutoSize = true;
             this.labelWerte.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWerte.Location = new System.Drawing.Point(399, 401);
+            this.labelWerte.Location = new System.Drawing.Point(322, 401);
             this.labelWerte.Name = "labelWerte";
             this.labelWerte.Size = new System.Drawing.Size(157, 31);
             this.labelWerte.TabIndex = 12;
@@ -236,7 +239,7 @@
             this.RbW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RbW.AutoSize = true;
             this.RbW.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RbW.Location = new System.Drawing.Point(183, 76);
+            this.RbW.Location = new System.Drawing.Point(182, 75);
             this.RbW.Margin = new System.Windows.Forms.Padding(4);
             this.RbW.Name = "RbW";
             this.RbW.Size = new System.Drawing.Size(95, 25);
@@ -250,7 +253,7 @@
             this.RbM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RbM.AutoSize = true;
             this.RbM.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RbM.Location = new System.Drawing.Point(51, 76);
+            this.RbM.Location = new System.Drawing.Point(50, 75);
             this.RbM.Margin = new System.Windows.Forms.Padding(4);
             this.RbM.Name = "RbM";
             this.RbM.Size = new System.Drawing.Size(101, 25);
@@ -284,7 +287,7 @@
             this.BtnGenerate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnGenerate.AutoSize = true;
             this.BtnGenerate.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGenerate.Location = new System.Drawing.Point(308, 76);
+            this.BtnGenerate.Location = new System.Drawing.Point(308, 75);
             this.BtnGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGenerate.Name = "BtnGenerate";
             this.BtnGenerate.Size = new System.Drawing.Size(158, 51);
@@ -298,7 +301,7 @@
             this.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnSave.AutoSize = true;
             this.BtnSave.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSave.Location = new System.Drawing.Point(474, 75);
+            this.BtnSave.Location = new System.Drawing.Point(492, 75);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(157, 53);
@@ -307,11 +310,46 @@
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // CbPotion
+            // 
+            this.CbPotion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbPotion.FormattingEnabled = true;
+            this.CbPotion.Location = new System.Drawing.Point(436, 273);
+            this.CbPotion.Name = "CbPotion";
+            this.CbPotion.Size = new System.Drawing.Size(121, 24);
+            this.CbPotion.TabIndex = 26;
+            this.CbPotion.SelectedIndexChanged += new System.EventHandler(this.CbPotion_SelectedIndexChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(436, 245);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(125, 22);
+            this.textBox5.TabIndex = 27;
+            this.textBox5.TabStop = false;
+            this.textBox5.Text = "Tränke:";
+            // 
+            // BtnPotion
+            // 
+            this.BtnPotion.Location = new System.Drawing.Point(435, 303);
+            this.BtnPotion.Name = "BtnPotion";
+            this.BtnPotion.Size = new System.Drawing.Size(101, 23);
+            this.BtnPotion.TabIndex = 28;
+            this.BtnPotion.Text = "Trank";
+            this.BtnPotion.UseVisualStyleBackColor = true;
+            this.BtnPotion.Click += new System.EventHandler(this.BtnPotion_Click);
+            // 
             // FormNpc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 756);
+            this.ClientSize = new System.Drawing.Size(1098, 844);
+            this.Controls.Add(this.BtnPotion);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.CbPotion);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.BtnGenerate);
             this.Controls.Add(this.BtnDeleteEquip);
@@ -369,5 +407,8 @@
         private System.Windows.Forms.Button BtnDeleteNpc;
         private System.Windows.Forms.Button BtnGenerate;
         private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.ComboBox CbPotion;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button BtnPotion;
     }
 }

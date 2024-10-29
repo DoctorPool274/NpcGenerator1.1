@@ -10,15 +10,12 @@
         // Konstruktor
         public Armor(string name, string material, RüstungsArt art, int werte) : base(name, material, werte)
         {
-            Art = art;        // Setze die Rüstungsart
-            ApplyArmorBonus(); // Rüstungsbonus anwenden
+            Art = art;
+            ApplyArmorBonus(); 
         }
 
-        // Methode zur Anwendung von Rüstungsboni
         public override void ApplyArmorBonus()
         {
-
-            // Berechne den Materialbonus direkt
             switch (Material)
             {
                 case "Leder":
@@ -45,20 +42,15 @@
             switch (Art)
             {
                 case RüstungsArt.Leicht:
-                    Werte += 3; // Bonus für leichte Rüstung
+                    Werte += 3;
                     break;
                 case RüstungsArt.Mittel:
-                    Werte += 5; // Bonus für mittlere Rüstung
+                    Werte += 5;
                     break;
                 case RüstungsArt.Schwer:
-                    Werte += 7; // Bonus für schwere Rüstung
+                    Werte += 7; 
                     break;
             }
-        }
-
-        public override void ApplyWeaponBonus()
-        {
-            // Leere Methode, da Waffen keinen Rüstungsbonus haben.
         }
     }
 }

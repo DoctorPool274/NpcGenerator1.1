@@ -23,15 +23,6 @@ namespace NpcGenerator1._1
 
             RbM.Checked = true;
 
-            CbRace.Items.AddRange(new[] { "Mensch", "Elf", "Faune", "Ork" });
-            CbRace.SelectedIndex = 0;
-
-            CbClass.Items.AddRange(new[] { "Soldat", "Handwerker", "Bauer", "Händler", "Magier", "Zauberer" });
-            CbClass.SelectedIndex = 0;
-
-            CbLevel.Items.AddRange(new[] { "Lehrling", "Geselle", "Gelehrter" });
-            CbLevel.SelectedIndex = 0;
-
             LoadNpcData();
 
             NpcManager.LoadAllNpcs();
@@ -56,11 +47,18 @@ namespace NpcGenerator1._1
         }
         private void InitializeComboBoxes()
         {
-            // Waffenarten
+            CbRace.Items.AddRange(new[] { "Mensch", "Elf", "Faune", "Ork" });
+            CbRace.SelectedIndex = 0;
+
+            CbClass.Items.AddRange(new[] { "Soldat", "Handwerker", "Bauer", "Händler", "Magier", "Zauberer" });
+            CbClass.SelectedIndex = 0;
+
+            CbLevel.Items.AddRange(new[] { "Lehrling", "Geselle", "Gelehrter" });
+            CbLevel.SelectedIndex = 0;
+
             CbWeapon.Items.AddRange(new[] { "Schwert", "Axt", "Dolch", "Stumpfewaffe", "Bogen", "Wurfwaffe" });
             CbWeapon.SelectedIndex = 0;
 
-            // Rüstungsarten (falls benötigt)
             CbArmor.Items.AddRange(new[] { "Leicht", "Mittel", "Schwer", "Sonstige" });
             CbArmor.SelectedIndex = 0;
 
@@ -74,9 +72,9 @@ namespace NpcGenerator1._1
             //comboBoxZauber.Items.AddRange(new[] { "Wiederherstellung", "Illusion", "Beschwörung", "Sonstige" });
             //comboBoxZauber.SelectedIndex = 0;
 
-            //// Tranktypen (falls benötigt)
-            //comboBoxTrank.Items.AddRange(new[] { "Wiederherstellung", "Verstärkung", "Schwächung", "Sonstige" });
-            //comboBoxTrank.SelectedIndex = 0;
+            // Tranktypen
+            CbPotion.Items.AddRange(new[] { "Wiederherstellung", "Verstärkung", "Schwächung", "Sonstige" });
+            CbPotion.SelectedIndex = 0;
         }
 
         //--------Speichern&Löschen----------------------------------------------------------------------------------
@@ -250,6 +248,36 @@ namespace NpcGenerator1._1
             currentNpc.Equipment.Add(newArmor);
             UpdateEquipmentDisplay();
         }
+        private void BtnPotion_Click(object sender, EventArgs e)
+        {
+            string selectedTrank = CbPotion.SelectedItem.ToString();
+
+            Tränke.TränkeArt art;
+            switch (selectedTrank)
+            {
+                case "Wiederherstellung":
+                    art = Tränke.TränkeArt.Wiederherstellung;
+                    break;
+                case "Verstärkung":
+                    art = Tränke.TränkeArt.Verstärkung;
+                    break;
+                case "Schwächung":
+                    art = Tränke.TränkeArt.Schwächung;
+                    break;
+                case "Sonstige":
+                    art = Tränke.TränkeArt.Sonstige;
+                    break;
+                default:
+                    MessageBox.Show("Kein Trank ausgewählt.");
+                    return;
+            }
+            Tränke newTrank = new Tränke(art, 0);
+            newTrank.ApplyPotionBonus();
+
+            currentNpc.Equipment.Add(newTrank);
+
+            UpdateEquipmentDisplay();
+        }
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
             string selectedRace = CbRace.SelectedItem.ToString();
@@ -370,7 +398,7 @@ namespace NpcGenerator1._1
         }
         private void UpdateEquipmentDisplay()
         {
-            labelSelectedEquipment.Text = "Ausrüstung:\n";
+            labelSelectedEquipment.Text = "Ausrüstung\n";
 
             if (currentNpc?.Equipment != null && currentNpc.Equipment.Count > 0)
             {
@@ -379,10 +407,10 @@ namespace NpcGenerator1._1
                     labelSelectedEquipment.Text += $"{item.Name} ({item.Material}) Wert: {item.Werte}\n";
                 }
             }
-            else
-            {
-                labelSelectedEquipment.Text += "Keine Ausrüstung vorhanden.";
-            }
+            //else
+            //{
+            //    labelSelectedEquipment.Text += "Keine Ausrüstung vorhanden.";
+            //}
         }
         //--------Cb&Rb--------------------------------------------------------------------
         private void CbWeapon_SelectedIndexChanged(object sender, EventArgs e)
@@ -393,7 +421,10 @@ namespace NpcGenerator1._1
         {
             UpdateMatsComboBox(isWeaponSelected: false);
         }
+        private void CbPotion_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
         private void CbRaceType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -438,7 +469,5 @@ namespace NpcGenerator1._1
         {
 
         }
-
-
     }
 }

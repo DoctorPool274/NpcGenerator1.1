@@ -91,6 +91,7 @@
     <Compile Include="Ork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tränke.cs" />
     <Compile Include="Weapon.cs" />
     <EmbeddedResource Include="FormDM.resx">
       <DependentUpon>FormDM.cs</DependentUpon>

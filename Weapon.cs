@@ -12,15 +12,11 @@
         public Weapon(string name, string material, WaffenArt art, int werte) : base(name, material, werte)
         {
             Art = art;
-            ApplyWeaponBonus(); // Waffenvorteil anwenden
+            ApplyWeaponBonus(); 
         }
 
-        // Methode zur Anwendung von Waffenvorteilen
         public override void ApplyWeaponBonus()
         {
-
-
-            // Berechne den Materialbonus direkt
             switch (Material)
             {
                 case "Eisen":
@@ -41,29 +37,24 @@
             switch (Art)
             {
                 case WaffenArt.Schwert:
-                    Werte += 6; // Bonus für Schwert: hier einfach mit +6 hinter materialBonus zb
+                    Werte += 6; 
                     break;
                 case WaffenArt.Axt:
-                    Werte += 7; // Bonus für Axt
+                    Werte += 7; 
                     break;
                 case WaffenArt.Stumpfewaffe:
-                    Werte += 5; // Bonus für stumpfe Waffe
+                    Werte += 5;
                     break;
                 case WaffenArt.Dolch:
-                    Werte += 4; // Bonus für Dolch
+                    Werte += 4;
                     break;
                 case WaffenArt.Bogen:
-                    Werte += 4; // Bonus für Bogen
+                    Werte += 4;
                     break;
                 case WaffenArt.Wurfwaffe:
-                    Werte += 3; // Bonus für Wurfwaffe
+                    Werte += 3;
                     break;
             }
-        }
-
-        public override void ApplyArmorBonus()
-        {
-            // Leere Methode, da Waffen keinen Rüstungsbonus haben.
         }
     }
 }
