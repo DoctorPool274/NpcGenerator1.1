@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace NpcGenerator1._1
+namespace NpcGeneratorV1
 {
-    internal class NameGenerator
+    internal static class NameGenerator
     {
         private static readonly Random random = new Random();
 
@@ -37,7 +37,7 @@ namespace NpcGenerator1._1
         // Orkische Namen nach Geschlecht
         private static readonly string[] orkischeMaennlicheVornamen = { "Grom", "Thrall", "Garrosh" };
         private static readonly string[] orkischeWeiblicheVornamen = { "Draka", "Azuka", "Jaina" };
-        private static readonly string[] orkischeNachnamen = { "Hellscream", "Goebles", "Doom" };
+        private static readonly string[] orkischeNachnamen = { "Hellscream", "Doom" };
 
 
         public static string GenerateRandomName(string race, string gender)
