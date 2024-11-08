@@ -24,7 +24,7 @@ namespace NpcGenerator1._1
 
         // Combat stats
         public int HP => 30 + Ausdauer;
-        // !!// MP Bitte nur bei Kamiden, Nythari, Sylvari und Morvani anzeigen.
+        // MP nur bei Kamiden, Nythari, Sylvari und Morvani anzeigen.
         public int Magica => (int)Math.Floor(2 * Intelligenz + 1.5 * Willenskraft);
         public int INI => (int)Math.Floor((Geschicklichkeit + Ausdauer + Intelligenz) * 0.2);
         public int PA => (int)Math.Floor(0.7 * Geschicklichkeit + 0.1 * Ausdauer);
@@ -34,7 +34,6 @@ namespace NpcGenerator1._1
         public int ATM => (int)Math.Floor(0.7 * Willenskraft + 0.3 * Intelligenz);
         public int DFM => (int)Math.Floor(0.6 * Ausdauer + 0.3 * Willenskraft);
 
-        //Ausrüstung
 
         public Npc(string name, string race, string type, string gender, string job, string level)
         {
@@ -110,7 +109,7 @@ namespace NpcGenerator1._1
                     break;
             }
         }
-        // Methode zum hinzufügen der Rassenbonis
+
         public virtual void ApplyRacialBonus() { }
         public string GetNpcDetails()
         {
@@ -122,7 +121,6 @@ namespace NpcGenerator1._1
         }
         public string GetNpcWerte()
         {
-            // Beginne die Werteanzeige mit HP
             StringBuilder npcWerte = new StringBuilder();
             npcWerte.AppendLine($"Kampfwerte:\nHP: {HP}");
 

@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNpc));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.CbNNpc = new System.Windows.Forms.ComboBox();
             this.CbWeapon = new System.Windows.Forms.ComboBox();
             this.CbArmor = new System.Windows.Forms.ComboBox();
             this.CbMaterial = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.labelDetails = new System.Windows.Forms.Label();
             this.labelSelectedEquipment = new System.Windows.Forms.Label();
             this.labelWerte = new System.Windows.Forms.Label();
@@ -53,103 +49,59 @@
             this.BtnGenerate = new System.Windows.Forms.Button();
             this.BtnSave = new System.Windows.Forms.Button();
             this.CbPotion = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.BtnPotion = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(50, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(125, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "Name:";
             // 
             // CbNNpc
             // 
             this.CbNNpc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbNNpc.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbNNpc.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbNNpc.FormattingEnabled = true;
-            this.CbNNpc.Location = new System.Drawing.Point(50, 179);
+            this.CbNNpc.Location = new System.Drawing.Point(3, 311);
             this.CbNNpc.Name = "CbNNpc";
-            this.CbNNpc.Size = new System.Drawing.Size(269, 33);
+            this.CbNNpc.Size = new System.Drawing.Size(189, 30);
             this.CbNNpc.TabIndex = 4;
             this.CbNNpc.SelectedIndexChanged += new System.EventHandler(this.CbNNpc_SelectedIndexChanged);
             // 
             // CbWeapon
             // 
             this.CbWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbWeapon.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbWeapon.FormattingEnabled = true;
-            this.CbWeapon.Location = new System.Drawing.Point(178, 273);
+            this.CbWeapon.Location = new System.Drawing.Point(3, 431);
             this.CbWeapon.Name = "CbWeapon";
-            this.CbWeapon.Size = new System.Drawing.Size(121, 24);
+            this.CbWeapon.Size = new System.Drawing.Size(189, 30);
             this.CbWeapon.TabIndex = 5;
             this.CbWeapon.SelectedIndexChanged += new System.EventHandler(this.CbWeapon_SelectedIndexChanged);
             // 
             // CbArmor
             // 
             this.CbArmor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbArmor.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbArmor.FormattingEnabled = true;
-            this.CbArmor.Location = new System.Drawing.Point(309, 272);
+            this.CbArmor.Location = new System.Drawing.Point(3, 511);
             this.CbArmor.Name = "CbArmor";
-            this.CbArmor.Size = new System.Drawing.Size(121, 24);
+            this.CbArmor.Size = new System.Drawing.Size(189, 30);
             this.CbArmor.TabIndex = 6;
             this.CbArmor.SelectedIndexChanged += new System.EventHandler(this.CbArmor_SelectedIndexChanged);
             // 
             // CbMaterial
             // 
             this.CbMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbMaterial.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbMaterial.FormattingEnabled = true;
-            this.CbMaterial.Location = new System.Drawing.Point(51, 273);
+            this.CbMaterial.Location = new System.Drawing.Point(3, 395);
             this.CbMaterial.Name = "CbMaterial";
-            this.CbMaterial.Size = new System.Drawing.Size(121, 24);
+            this.CbMaterial.Size = new System.Drawing.Size(189, 30);
             this.CbMaterial.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(309, 245);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(125, 22);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.TabStop = false;
-            this.textBox2.Text = "Rüstungen:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(178, 245);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(125, 22);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.TabStop = false;
-            this.textBox3.Text = "Waffen:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(51, 245);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(125, 22);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.TabStop = false;
-            this.textBox4.Text = "Material:";
             // 
             // labelDetails
             // 
             this.labelDetails.AutoSize = true;
             this.labelDetails.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDetails.Location = new System.Drawing.Point(44, 401);
+            this.labelDetails.Location = new System.Drawing.Point(216, 24);
             this.labelDetails.Name = "labelDetails";
             this.labelDetails.Size = new System.Drawing.Size(162, 31);
             this.labelDetails.TabIndex = 11;
@@ -159,7 +111,7 @@
             // 
             this.labelSelectedEquipment.AutoSize = true;
             this.labelSelectedEquipment.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSelectedEquipment.Location = new System.Drawing.Point(595, 401);
+            this.labelSelectedEquipment.Location = new System.Drawing.Point(456, 248);
             this.labelSelectedEquipment.Name = "labelSelectedEquipment";
             this.labelSelectedEquipment.Size = new System.Drawing.Size(145, 31);
             this.labelSelectedEquipment.TabIndex = 13;
@@ -167,10 +119,9 @@
             // 
             // labelWerte
             // 
-            this.labelWerte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelWerte.AutoSize = true;
             this.labelWerte.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWerte.Location = new System.Drawing.Point(322, 401);
+            this.labelWerte.Location = new System.Drawing.Point(216, 248);
             this.labelWerte.Name = "labelWerte";
             this.labelWerte.Size = new System.Drawing.Size(157, 31);
             this.labelWerte.TabIndex = 12;
@@ -178,9 +129,10 @@
             // 
             // BtnCA
             // 
-            this.BtnCA.Location = new System.Drawing.Point(309, 302);
+            this.BtnCA.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCA.Location = new System.Drawing.Point(3, 547);
             this.BtnCA.Name = "BtnCA";
-            this.BtnCA.Size = new System.Drawing.Size(101, 23);
+            this.BtnCA.Size = new System.Drawing.Size(189, 36);
             this.BtnCA.TabIndex = 15;
             this.BtnCA.Text = "Rüstung";
             this.BtnCA.UseVisualStyleBackColor = true;
@@ -188,9 +140,10 @@
             // 
             // BtnCW
             // 
-            this.BtnCW.Location = new System.Drawing.Point(178, 303);
+            this.BtnCW.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCW.Location = new System.Drawing.Point(3, 467);
             this.BtnCW.Name = "BtnCW";
-            this.BtnCW.Size = new System.Drawing.Size(101, 23);
+            this.BtnCW.Size = new System.Drawing.Size(189, 38);
             this.BtnCW.TabIndex = 14;
             this.BtnCW.Text = "Waffe";
             this.BtnCW.UseVisualStyleBackColor = true;
@@ -199,39 +152,43 @@
             // CbRace
             // 
             this.CbRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbRace.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbRace.FormattingEnabled = true;
-            this.CbRace.Location = new System.Drawing.Point(50, 14);
+            this.CbRace.Location = new System.Drawing.Point(3, 3);
             this.CbRace.Name = "CbRace";
-            this.CbRace.Size = new System.Drawing.Size(121, 24);
+            this.CbRace.Size = new System.Drawing.Size(189, 30);
             this.CbRace.TabIndex = 16;
             this.CbRace.SelectedIndexChanged += new System.EventHandler(this.CbRace_SelectedIndexChanged);
             // 
             // CbRaceType
             // 
             this.CbRaceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbRaceType.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbRaceType.FormattingEnabled = true;
-            this.CbRaceType.Location = new System.Drawing.Point(181, 14);
+            this.CbRaceType.Location = new System.Drawing.Point(3, 39);
             this.CbRaceType.Name = "CbRaceType";
-            this.CbRaceType.Size = new System.Drawing.Size(121, 24);
+            this.CbRaceType.Size = new System.Drawing.Size(189, 30);
             this.CbRaceType.TabIndex = 17;
             this.CbRaceType.SelectedIndexChanged += new System.EventHandler(this.CbRaceType_SelectedIndexChanged);
             // 
             // CbLevel
             // 
             this.CbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbLevel.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbLevel.FormattingEnabled = true;
-            this.CbLevel.Location = new System.Drawing.Point(435, 14);
+            this.CbLevel.Location = new System.Drawing.Point(3, 111);
             this.CbLevel.Name = "CbLevel";
-            this.CbLevel.Size = new System.Drawing.Size(121, 24);
+            this.CbLevel.Size = new System.Drawing.Size(189, 30);
             this.CbLevel.TabIndex = 18;
             // 
             // CbClass
             // 
             this.CbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbClass.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbClass.FormattingEnabled = true;
-            this.CbClass.Location = new System.Drawing.Point(308, 14);
+            this.CbClass.Location = new System.Drawing.Point(3, 75);
             this.CbClass.Name = "CbClass";
-            this.CbClass.Size = new System.Drawing.Size(121, 24);
+            this.CbClass.Size = new System.Drawing.Size(189, 30);
             this.CbClass.TabIndex = 19;
             // 
             // RbW
@@ -239,8 +196,8 @@
             this.RbW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RbW.AutoSize = true;
             this.RbW.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RbW.Location = new System.Drawing.Point(182, 75);
-            this.RbW.Margin = new System.Windows.Forms.Padding(4);
+            this.RbW.Location = new System.Drawing.Point(4, 181);
+            this.RbW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RbW.Name = "RbW";
             this.RbW.Size = new System.Drawing.Size(95, 25);
             this.RbW.TabIndex = 21;
@@ -253,8 +210,8 @@
             this.RbM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RbM.AutoSize = true;
             this.RbM.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RbM.Location = new System.Drawing.Point(50, 75);
-            this.RbM.Margin = new System.Windows.Forms.Padding(4);
+            this.RbM.Location = new System.Drawing.Point(4, 148);
+            this.RbM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RbM.Name = "RbM";
             this.RbM.Size = new System.Drawing.Size(101, 25);
             this.RbM.TabIndex = 20;
@@ -264,9 +221,10 @@
             // 
             // BtnDeleteEquip
             // 
-            this.BtnDeleteEquip.Location = new System.Drawing.Point(51, 303);
+            this.BtnDeleteEquip.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeleteEquip.Location = new System.Drawing.Point(3, 667);
             this.BtnDeleteEquip.Name = "BtnDeleteEquip";
-            this.BtnDeleteEquip.Size = new System.Drawing.Size(101, 26);
+            this.BtnDeleteEquip.Size = new System.Drawing.Size(189, 50);
             this.BtnDeleteEquip.TabIndex = 23;
             this.BtnDeleteEquip.Text = "Lösche Equip";
             this.BtnDeleteEquip.UseVisualStyleBackColor = true;
@@ -274,9 +232,10 @@
             // 
             // BtnDeleteNpc
             // 
-            this.BtnDeleteNpc.Location = new System.Drawing.Point(328, 179);
+            this.BtnDeleteNpc.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeleteNpc.Location = new System.Drawing.Point(3, 347);
             this.BtnDeleteNpc.Name = "BtnDeleteNpc";
-            this.BtnDeleteNpc.Size = new System.Drawing.Size(105, 33);
+            this.BtnDeleteNpc.Size = new System.Drawing.Size(189, 42);
             this.BtnDeleteNpc.TabIndex = 22;
             this.BtnDeleteNpc.Text = "Lösche Npc";
             this.BtnDeleteNpc.UseVisualStyleBackColor = true;
@@ -287,10 +246,10 @@
             this.BtnGenerate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnGenerate.AutoSize = true;
             this.BtnGenerate.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGenerate.Location = new System.Drawing.Point(308, 75);
-            this.BtnGenerate.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGenerate.Location = new System.Drawing.Point(4, 214);
+            this.BtnGenerate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGenerate.Name = "BtnGenerate";
-            this.BtnGenerate.Size = new System.Drawing.Size(158, 51);
+            this.BtnGenerate.Size = new System.Drawing.Size(188, 41);
             this.BtnGenerate.TabIndex = 24;
             this.BtnGenerate.Text = "Erstellen";
             this.BtnGenerate.UseVisualStyleBackColor = true;
@@ -301,10 +260,10 @@
             this.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnSave.AutoSize = true;
             this.BtnSave.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSave.Location = new System.Drawing.Point(492, 75);
-            this.BtnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSave.Location = new System.Drawing.Point(4, 263);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(157, 53);
+            this.BtnSave.Size = new System.Drawing.Size(188, 41);
             this.BtnSave.TabIndex = 25;
             this.BtnSave.Text = "Speichern";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -313,85 +272,75 @@
             // CbPotion
             // 
             this.CbPotion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbPotion.Font = new System.Drawing.Font("Ink Free", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbPotion.FormattingEnabled = true;
-            this.CbPotion.Location = new System.Drawing.Point(436, 273);
+            this.CbPotion.Location = new System.Drawing.Point(3, 589);
             this.CbPotion.Name = "CbPotion";
-            this.CbPotion.Size = new System.Drawing.Size(121, 24);
+            this.CbPotion.Size = new System.Drawing.Size(189, 30);
             this.CbPotion.TabIndex = 26;
             this.CbPotion.SelectedIndexChanged += new System.EventHandler(this.CbPotion_SelectedIndexChanged);
             // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Ink Free", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(436, 245);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(125, 22);
-            this.textBox5.TabIndex = 27;
-            this.textBox5.TabStop = false;
-            this.textBox5.Text = "Tränke:";
-            // 
             // BtnPotion
             // 
-            this.BtnPotion.Location = new System.Drawing.Point(435, 303);
+            this.BtnPotion.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPotion.Location = new System.Drawing.Point(3, 625);
             this.BtnPotion.Name = "BtnPotion";
-            this.BtnPotion.Size = new System.Drawing.Size(101, 23);
+            this.BtnPotion.Size = new System.Drawing.Size(189, 36);
             this.BtnPotion.TabIndex = 28;
             this.BtnPotion.Text = "Trank";
             this.BtnPotion.UseVisualStyleBackColor = true;
             this.BtnPotion.Click += new System.EventHandler(this.BtnPotion_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.CbRace);
+            this.flowLayoutPanel1.Controls.Add(this.CbRaceType);
+            this.flowLayoutPanel1.Controls.Add(this.CbClass);
+            this.flowLayoutPanel1.Controls.Add(this.CbLevel);
+            this.flowLayoutPanel1.Controls.Add(this.RbM);
+            this.flowLayoutPanel1.Controls.Add(this.RbW);
+            this.flowLayoutPanel1.Controls.Add(this.BtnGenerate);
+            this.flowLayoutPanel1.Controls.Add(this.BtnSave);
+            this.flowLayoutPanel1.Controls.Add(this.CbNNpc);
+            this.flowLayoutPanel1.Controls.Add(this.BtnDeleteNpc);
+            this.flowLayoutPanel1.Controls.Add(this.CbMaterial);
+            this.flowLayoutPanel1.Controls.Add(this.CbWeapon);
+            this.flowLayoutPanel1.Controls.Add(this.BtnCW);
+            this.flowLayoutPanel1.Controls.Add(this.CbArmor);
+            this.flowLayoutPanel1.Controls.Add(this.BtnCA);
+            this.flowLayoutPanel1.Controls.Add(this.CbPotion);
+            this.flowLayoutPanel1.Controls.Add(this.BtnPotion);
+            this.flowLayoutPanel1.Controls.Add(this.BtnDeleteEquip);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(208, 736);
+            this.flowLayoutPanel1.TabIndex = 29;
+            // 
             // FormNpc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 844);
-            this.Controls.Add(this.BtnPotion);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.CbPotion);
-            this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.BtnGenerate);
-            this.Controls.Add(this.BtnDeleteEquip);
-            this.Controls.Add(this.BtnDeleteNpc);
-            this.Controls.Add(this.RbW);
-            this.Controls.Add(this.RbM);
-            this.Controls.Add(this.CbClass);
-            this.Controls.Add(this.CbLevel);
-            this.Controls.Add(this.CbRaceType);
-            this.Controls.Add(this.CbRace);
-            this.Controls.Add(this.BtnCA);
-            this.Controls.Add(this.BtnCW);
+            this.ClientSize = new System.Drawing.Size(1086, 741);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.labelSelectedEquipment);
             this.Controls.Add(this.labelWerte);
             this.Controls.Add(this.labelDetails);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.CbMaterial);
-            this.Controls.Add(this.CbArmor);
-            this.Controls.Add(this.CbWeapon);
-            this.Controls.Add(this.CbNNpc);
-            this.Controls.Add(this.textBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNpc";
             this.Text = "FormNpc";
             this.Load += new System.EventHandler(this.FormNpc_Load);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox CbNNpc;
         private System.Windows.Forms.ComboBox CbWeapon;
         private System.Windows.Forms.ComboBox CbArmor;
         private System.Windows.Forms.ComboBox CbMaterial;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label labelDetails;
         private System.Windows.Forms.Label labelSelectedEquipment;
         private System.Windows.Forms.Label labelWerte;
@@ -408,7 +357,7 @@
         private System.Windows.Forms.Button BtnGenerate;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.ComboBox CbPotion;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button BtnPotion;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
