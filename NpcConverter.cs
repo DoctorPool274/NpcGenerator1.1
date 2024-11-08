@@ -61,7 +61,6 @@ namespace NpcGenerator1._1
                     }
                 }
             }
-
             return npc;
         }
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

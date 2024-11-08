@@ -77,15 +77,6 @@ namespace NpcGenerator1._1
             CbPotion.SelectedIndex = 0;
         }
 
-        //--------Speichern&Löschen----------------------------------------------------------------------------------
-        //private void SaveNpcData()
-        //{
-        //    if (this.newNpc != null)
-        //    {
-        //        string json = JsonConvert.SerializeObject(allNpcs, Formatting.Indented);
-        //        File.WriteAllText(npcDataFile, json);
-        //    }
-        //}
         //--------Laden-------------------------------------------------------------------------------------------------
         private void LoadNpcDetails(Npc npc)
         {
@@ -94,10 +85,10 @@ namespace NpcGenerator1._1
                 labelDetails.Text = npc.GetNpcDetails();
                 labelWerte.Text = npc.GetNpcWerte();
 
-                labelSelectedEquipment.Text = "Ausrüstung:\n";
+                labelSelectedEquipment.Text = "Ausrüstung \n";
                 foreach (var item in npc.Equipment)
                 {
-                    labelSelectedEquipment.Text += $"{item.Name} ({item.Material}) Wert:{item.Werte}\n";
+                    labelSelectedEquipment.Text += $"{item.Name} ({item.Material}) Wert: {item.Werte}\n";
                 }
 
                 if (npc.Equipment.Count == 0)
@@ -167,12 +158,6 @@ namespace NpcGenerator1._1
             string selectedMaterial = CbMaterial.SelectedItem.ToString();
             string selectedWeapon = CbWeapon.SelectedItem.ToString();
 
-            if (string.IsNullOrEmpty(selectedMaterial) || string.IsNullOrEmpty(selectedWeapon))
-            {
-                MessageBox.Show("Bitte eine Waffe und ein Material auswählen.");
-                return;
-            }
-
             Weapon.WaffenArt art;
             switch (selectedWeapon)
             {
@@ -217,12 +202,6 @@ namespace NpcGenerator1._1
 
             string selectedMaterial = CbMaterial.SelectedItem.ToString();
             string selectedArmor = CbArmor.SelectedItem.ToString();
-
-            if (string.IsNullOrEmpty(selectedMaterial) || string.IsNullOrEmpty(selectedArmor))
-            {
-                MessageBox.Show("Bitte eine Rüstung und ein Material auswählen.");
-                return;
-            }
 
             Armor.RüstungsArt art;
             switch (selectedArmor)
@@ -271,7 +250,7 @@ namespace NpcGenerator1._1
                     MessageBox.Show("Kein Trank ausgewählt.");
                     return;
             }
-            Tränke newTrank = new Tränke(art, 0);
+            Tränke newTrank = new Tränke("Trank", art, 0);
             newTrank.ApplyPotionBonus();
 
             currentNpc.Equipment.Add(newTrank);
@@ -306,12 +285,9 @@ namespace NpcGenerator1._1
                 // ComboBox und UI aktualisieren
                 UpdateCbNNpc();
                 labelDetails.Text = string.Empty;  // NPC-Details zurücksetzen
-                labelSelectedEquipment.Text = "Keine Ausrüstung.";  // Ausrüstungsanzeige zurücksetzen
+                labelWerte.Text = string.Empty;
+                labelSelectedEquipment.Text = string.Empty;  // Ausrüstungsanzeige zurücksetzen
                 currentNpc = null;  // Aktuellen NPC auf null setzen
-            }
-            else
-            {
-                MessageBox.Show("Kein NPC zum Löschen ausgewählt.");
             }
         }
 
@@ -407,10 +383,6 @@ namespace NpcGenerator1._1
                     labelSelectedEquipment.Text += $"{item.Name} ({item.Material}) Wert: {item.Werte}\n";
                 }
             }
-            //else
-            //{
-            //    labelSelectedEquipment.Text += "Keine Ausrüstung vorhanden.";
-            //}
         }
         //--------Cb&Rb--------------------------------------------------------------------
         private void CbWeapon_SelectedIndexChanged(object sender, EventArgs e)

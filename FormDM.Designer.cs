@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDM));
             this.BtnPlayer = new System.Windows.Forms.Button();
             this.BtnMap = new System.Windows.Forms.Button();
             this.BtnThings = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.BtnPlayer.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPlayer.Location = new System.Drawing.Point(39, 37);
             this.BtnPlayer.Name = "BtnPlayer";
-            this.BtnPlayer.Size = new System.Drawing.Size(131, 93);
+            this.BtnPlayer.Size = new System.Drawing.Size(137, 99);
             this.BtnPlayer.TabIndex = 0;
             this.BtnPlayer.Text = "Spieler";
             this.BtnPlayer.UseVisualStyleBackColor = true;
@@ -48,9 +49,9 @@
             // BtnMap
             // 
             this.BtnMap.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMap.Location = new System.Drawing.Point(209, 191);
+            this.BtnMap.Location = new System.Drawing.Point(208, 168);
             this.BtnMap.Name = "BtnMap";
-            this.BtnMap.Size = new System.Drawing.Size(131, 93);
+            this.BtnMap.Size = new System.Drawing.Size(135, 105);
             this.BtnMap.TabIndex = 2;
             this.BtnMap.Text = "Map";
             this.BtnMap.UseVisualStyleBackColor = true;
@@ -59,9 +60,9 @@
             // BtnThings
             // 
             this.BtnThings.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnThings.Location = new System.Drawing.Point(39, 191);
+            this.BtnThings.Location = new System.Drawing.Point(40, 168);
             this.BtnThings.Name = "BtnThings";
-            this.BtnThings.Size = new System.Drawing.Size(131, 93);
+            this.BtnThings.Size = new System.Drawing.Size(137, 105);
             this.BtnThings.TabIndex = 3;
             this.BtnThings.Text = "Sonstiges";
             this.BtnThings.UseVisualStyleBackColor = true;
@@ -72,7 +73,7 @@
             this.BtnNpc.Font = new System.Drawing.Font("Ink Free", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNpc.Location = new System.Drawing.Point(209, 37);
             this.BtnNpc.Name = "BtnNpc";
-            this.BtnNpc.Size = new System.Drawing.Size(131, 93);
+            this.BtnNpc.Size = new System.Drawing.Size(135, 99);
             this.BtnNpc.TabIndex = 4;
             this.BtnNpc.Text = "Npc";
             this.BtnNpc.UseVisualStyleBackColor = true;
@@ -82,11 +83,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 469);
+            this.ClientSize = new System.Drawing.Size(381, 308);
             this.Controls.Add(this.BtnNpc);
             this.Controls.Add(this.BtnThings);
             this.Controls.Add(this.BtnMap);
             this.Controls.Add(this.BtnPlayer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDM";
             this.Text = "DM Oberfläche";
             this.ResumeLayout(false);
