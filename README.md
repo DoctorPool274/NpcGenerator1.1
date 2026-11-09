@@ -1,14 +1,23 @@
-# 🎲 NpcGenerator 1.1
+# 🎲 NpcGenerator & DnD-Tool 1.1
 
-Ein C#-basiertes Tool zur prozeduralen Erstellung und Verwaltung von NPC-Datenstrukturen (Non-Player Characters) für Spiele- und Rollenspielsysteme.
+Eine C#-Anwendung zur prozeduralen Generierung von Nicht-Spieler-Charakteren (NPCs) und eine angehende Multiplayer-Plattform für Pen-&-Paper-Runden (DnD).
 
 ---
 
-## ✨ Features
+## ✨ Aktuelle Features
 
-- ⚙️ **Prozedurale Generierung:** Automatische Erstellung von Attributen, Namen und Eigenschaften.
-- 📊 **Strukturierte Datenhaltung:** Saubere Objektmodellierung in C# für einfache Erweiterbarkeit.
-- 🛠️ **Modularer Aufbau:** Leicht in bestehende C#- oder Unity/Godot-Projekte integrierbar.
+- 👤 **Prozedurale Charaktererstellung:** Generiert NPCs mit Name, Rasse, Klasse, Stufe (Level) und passender Ausrüstung.
+- ⚔️ **Inventar- & Ausrüstungssystem:** Automatische Logik zur Zuweisung von Equipment basierend auf Stufe und Klasse.
+- 🎲 **Zufallslogik & Varianz:** Kombination aus festen DnD-Regelsystemen und prozeduralen Algorithmen.
+- 📐 **Saubere Objektstruktur:** Objektorientierte Datenmodelle in C# für einfache Erweiterbarkeit.
+
+---
+
+## 🗺️ Roadmap & Geplante Features (VTT / Online-Playing)
+
+- 🗺️ **Interaktive Karten-Funktion:** Integration von Grid-Maps für Kampf- und Erkundungsszenarien.
+- 👑 **GM-Oberfläche (Game Master):** Spezielle Spielleiter-Ansicht zur Verteilung von NPCs, Gegner-Stats und Raum-Steuerung.
+- 🌐 **Online-Multiplayer (Network/WebSockets):** Synchronisiertes Gameplay, damit Spielleiter und Spieler live miteinander interagieren können.
 
 ---
 
@@ -16,3 +25,12 @@ Ein C#-basiertes Tool zur prozeduralen Erstellung und Verwaltung von NPC-Datenst
 
 - **Sprache:** C# (.NET)
 - **Umgebung:** Visual Studio
+- **Architektur & Konzepte:** Objektorientierung, DTOs, geplante Netzwerksynchronisation / State Management
+
+---
+
+## 🚀 Schnellstart
+
+1. Repository klonen:
+   ```bash
+   git clone [https://github.com/Bedran-zdemir-Knell/NpcGenerator1.1.git](https://github.com/Bedran-zdemir-Knell/NpcGenerator1.1.git)
